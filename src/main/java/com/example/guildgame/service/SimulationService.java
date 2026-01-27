@@ -159,9 +159,13 @@ public class SimulationService {
 		state.receptionist.adventurerTrust += adventurerTrust;
 		state.receptionist.guildReputation += guildReputation;
 		state.receptionist.publicFame += publicFame;
+		
+		// Check for promotion - later moved to new seevice with promotions of adventurers
+		handlePromotion(state);
 
 		// 🔥 Generate new quests for next week
 		generateWeeklyQuestService.generateWeeklyQuests(state);
+		
 
 		ResetState.resetVisitedToday(state);
 
@@ -198,6 +202,26 @@ public class SimulationService {
 
 	private boolean traitsMatch(Adventurer adv, QuestTemplate qi) {
 		return adv.traits.contains(qi.trait);
+	}
+	
+	private void handlePromotion(GameState gs) {
+		
+		double guildReputation = gs.receptionist.guildReputation;
+        double adventurerTrust = gs.receptionist.adventurerTrust;
+        double publicFame = gs.receptionist.publicFame;
+        
+        if (guildReputation > 200 && adventurerTrust > 200 && publicFame > 200 && gs.receptionist.rank.equals(Rank.D)) {
+        	// promoted to c
+        	gs.receptionist.rank = Rank.C;
+        	gs.receptionist.justPromoted = true;
+        }
+        
+        else if (guildReputation > 100 && adventurerTrust > 100 && publicFame > 200 && gs.receptionist.rank.equals(Rank.E)) {
+        	// promoted to d
+        	gs.receptionist.rank = Rank.D;
+        	gs.receptionist.justPromoted = true;
+        }
+        
 	}
 
 }

@@ -17,4 +17,9 @@ public class AuditController {
     public void acknowledge() {
         stateService.clearAudit();
     }
+    
+    @PostMapping("/acknowledge/promotion")
+    public void acknowledgePromotion() {
+    	stateService.get().receptionist.justPromoted = false;
+    }
 }

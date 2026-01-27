@@ -11,4 +11,5 @@ public class Receptionist {
     public double adventurerTrust;
     public double publicFame;
     public int salary;
+    public boolean justPromoted;
 }

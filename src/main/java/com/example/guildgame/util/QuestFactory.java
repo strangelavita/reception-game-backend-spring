@@ -13,10 +13,8 @@ public class QuestFactory {
 
 		quests.addAll(generateFQuests());
 		quests.addAll(generateEQuests());
-
-		if (quests.size() != 50) {
-			throw new IllegalStateException("Expected 50 quests, got " + quests.size());
-		}
+		quests.addAll(generateDQuests());
+		quests.addAll(generateCQuests());
 
 		return quests;
 	}
@@ -32,6 +30,119 @@ public class QuestFactory {
 		q.baseRisk = baseRisk;
 		q.trait = trait;
 		return q;
+	}
+
+	
+	private static List<QuestTemplate> generateCQuests() {
+	    List<QuestTemplate> quests = new ArrayList<>();
+
+	    quests.add(createQuest(
+	            "Crush a Coordinated Monster Offensive",
+	            "Command multiple teams to stop an organized wave of monster attacks.",
+	            QuestDifficulty.C, 240, 0.55, AdventurerTrait.LOYAL));
+
+	    quests.add(createQuest(
+	            "Secure Exclusive Trade Rights",
+	            "Ensure the guild becomes the sole protector of a vital trade region.",
+	            QuestDifficulty.C, 260, 0.58, AdventurerTrait.GREEDY));
+
+	    quests.add(createQuest(
+	            "Publicly Overthrow a Warlord",
+	            "Defeat a powerful local ruler whose fall will echo across the region.",
+	            QuestDifficulty.C, 250, 0.56, AdventurerTrait.FAME_SEEKER));
+
+	    quests.add(createQuest(
+	            "Expand Guild Territory",
+	            "Establish permanent guild authority in a contested region.",
+	            QuestDifficulty.C, 270, 0.60, AdventurerTrait.AMBITIOUS));
+
+	    quests.add(createQuest(
+	            "Uncover a Hidden Conspiracy",
+	            "Expose and neutralize a coordinated threat operating behind the scenes.",
+	            QuestDifficulty.C, 245, 0.54, AdventurerTrait.CAUTIOUS));
+
+	    quests.add(createQuest(
+	            "Command a Multi-Party Operation",
+	            "Coordinate several adventuring teams toward a single strategic objective.",
+	            QuestDifficulty.C, 255, 0.57, AdventurerTrait.LOYAL));
+
+	    quests.add(createQuest(
+	            "Claim a Lost Fortress",
+	            "Clear, secure, and prepare an abandoned stronghold for guild use.",
+	            QuestDifficulty.C, 265, 0.59, AdventurerTrait.AMBITIOUS));
+
+	    quests.add(createQuest(
+	            "Seize a Legendary Hoard",
+	            "Recover a long-rumored treasure before rival factions can intervene.",
+	            QuestDifficulty.C, 280, 0.62, AdventurerTrait.GREEDY));
+
+	    quests.add(createQuest(
+	            "End a Regional Crisis",
+	            "Resolve a long-standing threat whose effects span multiple settlements.",
+	            QuestDifficulty.C, 250, 0.55, AdventurerTrait.FAME_SEEKER));
+
+	    quests.add(createQuest(
+	            "Prevent an Imminent War",
+	            "Disrupt plans that would plunge the region into open conflict.",
+	            QuestDifficulty.C, 245, 0.54, AdventurerTrait.CAUTIOUS));
+
+	    return quests;
+	}
+
+	private static List<QuestTemplate> generateDQuests() {
+	    List<QuestTemplate> quests = new ArrayList<>();
+
+	    quests.add(createQuest(
+	            "Disrupt Monster Breeding Grounds",
+	            "Locate and destroy a growing monster nest before it reaches critical size.",
+	            QuestDifficulty.D, 160, 0.38, AdventurerTrait.CAUTIOUS));
+
+	    quests.add(createQuest(
+	            "Lead a Trade Convoy Through Hostile Lands",
+	            "Coordinate guards and scouts to ensure a multi-day caravan reaches its destination.",
+	            QuestDifficulty.D, 150, 0.36, AdventurerTrait.LOYAL));
+
+	    quests.add(createQuest(
+	            "Recover Tribute from Defiant Settlement",
+	            "Force a resistant settlement to honor its guild contract and deliver owed payments.",
+	            QuestDifficulty.D, 180, 0.40, AdventurerTrait.GREEDY));
+
+	    quests.add(createQuest(
+	            "Publicly Defeat a Regional Threat",
+	            "Eliminate a known danger in a highly visible operation to reinforce guild authority.",
+	            QuestDifficulty.D, 155, 0.37, AdventurerTrait.FAME_SEEKER));
+
+	    quests.add(createQuest(
+	            "Establish a Forward Guild Camp",
+	            "Secure terrain, assign watches, and prepare defenses for long-term operations.",
+	            QuestDifficulty.D, 165, 0.39, AdventurerTrait.AMBITIOUS));
+
+	    quests.add(createQuest(
+	            "Intercept a Smuggling Network",
+	            "Identify and dismantle a coordinated smuggling ring without sparking open conflict.",
+	            QuestDifficulty.D, 170, 0.41, AdventurerTrait.CAUTIOUS));
+
+	    quests.add(createQuest(
+	            "Protect a Diplomatic Envoy",
+	            "Ensure a sensitive political mission succeeds despite sabotage attempts.",
+	            QuestDifficulty.D, 160, 0.38, AdventurerTrait.LOYAL));
+
+	    quests.add(createQuest(
+	            "Seize a Rival Guild Cache",
+	            "Locate and claim stored assets before rival forces can respond.",
+	            QuestDifficulty.D, 185, 0.42, AdventurerTrait.GREEDY));
+
+	    quests.add(createQuest(
+	            "Demonstrate Guild Supremacy",
+	            "Complete a difficult task specifically chosen to intimidate competitors.",
+	            QuestDifficulty.D, 155, 0.36, AdventurerTrait.FAME_SEEKER));
+
+	    quests.add(createQuest(
+	            "Negotiate Control of a Strategic Route",
+	            "Secure long-term access rights through pressure, leverage, or diplomacy.",
+	            QuestDifficulty.D, 170, 0.40, AdventurerTrait.AMBITIOUS));
+
+	    return quests;
 	}
 
 

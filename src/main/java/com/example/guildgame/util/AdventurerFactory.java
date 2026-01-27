@@ -17,7 +17,9 @@ public class AdventurerFactory {
 	    allAdventurers.addAll(generateAdventurersBatch3());
 	    allAdventurers.addAll(generateAdventurersBatch4());
 	    allAdventurers.addAll(generateAdventurersBatch5());
-
+	    allAdventurers.addAll(generateAdventurersBatch6());
+	    allAdventurers.addAll(generateAdventurersBatch7());
+	    
 	    return allAdventurers;
 	}
 
@@ -463,6 +465,178 @@ public class AdventurerFactory {
     }
 
     
+    public static List<Adventurer> generateAdventurersBatch6() {
+        List<Adventurer> adventurers = new ArrayList<>();
+
+        adventurers.add(create(
+                "Alric Stoneward",
+                Rank.D,
+                Set.of(AdventurerTrait.LOYAL, AdventurerTrait.CAUTIOUS),
+                "A veteran shieldman who has led multiple low-rank parties through dangerous territory. " +
+                "Alric believes survival is earned through discipline and refuses reckless commands."
+        ));
+
+        adventurers.add(create(
+                "Vesha Emberline",
+                Rank.D,
+                Set.of(AdventurerTrait.AMBITIOUS, AdventurerTrait.FAME_SEEKER),
+                "After earning praise for defeating a regional threat, Vesha now seeks greater visibility. " +
+                "She chooses quests that put her name in reports and her deeds in guild halls."
+        ));
+
+        adventurers.add(create(
+                "Korrin Deepmark",
+                Rank.D,
+                Set.of(AdventurerTrait.GREEDY),
+                "A seasoned monster hunter, Korrin has learned which dangers pay and which merely kill. " +
+                "He accepts only contracts that justify the bloodshed."
+        ));
+
+        adventurers.add(create(
+                "Elira Moonpath",
+                Rank.D,
+                Set.of(AdventurerTrait.CAUTIOUS, AdventurerTrait.LOYAL),
+                "Elira served as a pathfinder on long expeditions, guiding parties safely through hostile regions. " +
+                "She values preparation and considers abandoning allies a moral failure."
+        ));
+
+        adventurers.add(create(
+                "Dorn Blackvein",
+                Rank.D,
+                Set.of(AdventurerTrait.AMBITIOUS),
+                "Once overlooked despite consistent success, Dorn is determined to climb the guild hierarchy. " +
+                "He seeks command roles and difficult missions to prove his worth."
+        ));
+
+        adventurers.add(create(
+                "Syla Brightscar",
+                Rank.D,
+                Set.of(AdventurerTrait.FAME_SEEKER),
+                "Known for surviving a disastrous escort mission, Syla gained public attention overnight. " +
+                "She now embraces high-visibility quests to maintain her growing reputation."
+        ));
+
+        adventurers.add(create(
+                "Bram Ironfold",
+                Rank.D,
+                Set.of(AdventurerTrait.LOYAL, AdventurerTrait.GREEDY),
+                "A professional mercenary, Bram sells his skill—but never his word. " +
+                "Once paid, he protects his party with unwavering resolve."
+        ));
+
+        adventurers.add(create(
+                "Neris Hollowwind",
+                Rank.D,
+                Set.of(AdventurerTrait.CAUTIOUS),
+                "After losing half her unit to a misjudged assault, Neris became a careful tactician. " +
+                "She favors retreat and regrouping over costly victories."
+        ));
+
+        adventurers.add(create(
+                "Jarek Flintfall",
+                Rank.D,
+                Set.of(AdventurerTrait.GREEDY, AdventurerTrait.AMBITIOUS),
+                "Jarek believes rank and wealth are inseparable. " +
+                "He chooses missions that promise both advancement and strong financial return."
+        ));
+
+        adventurers.add(create(
+                "Mireth Valeguard",
+                Rank.D,
+                Set.of(AdventurerTrait.LOYAL),
+                "A former border warden, Mireth treats every contract like a sworn duty. " +
+                "She places group survival above personal success."
+        ));
+
+        return adventurers;
+    }
+
+    public static List<Adventurer> generateAdventurersBatch7() {
+        List<Adventurer> adventurers = new ArrayList<>();
+
+        adventurers.add(create(
+                "Captain Halren Voss",
+                Rank.C,
+                Set.of(AdventurerTrait.LOYAL, AdventurerTrait.CAUTIOUS),
+                "A respected field commander, Halren has led dozens of successful operations. " +
+                "He prioritizes planning, coordination, and minimizing casualties."
+        ));
+
+        adventurers.add(create(
+                "Seraphine Goldflare",
+                Rank.C,
+                Set.of(AdventurerTrait.FAME_SEEKER, AdventurerTrait.AMBITIOUS),
+                "Seraphine is already a recognized name within the guild. " +
+                "She seeks legendary accomplishments to secure her place in history."
+        ));
+
+        adventurers.add(create(
+                "Tharek Coinbinder",
+                Rank.C,
+                Set.of(AdventurerTrait.GREEDY),
+                "A master negotiator as much as a fighter, Tharek ensures every contract favors him. " +
+                "He is known for extracting maximum profit from dangerous engagements."
+        ));
+
+        adventurers.add(create(
+                "Isera Dawnward",
+                Rank.C,
+                Set.of(AdventurerTrait.LOYAL),
+                "Renowned for never losing a party member, Isera has earned deep trust within the guild. " +
+                "She inspires loyalty through action rather than words."
+        ));
+
+        adventurers.add(create(
+                "Kalen Riftwalker",
+                Rank.C,
+                Set.of(AdventurerTrait.CAUTIOUS, AdventurerTrait.AMBITIOUS),
+                "Kalen advances through careful calculation rather than bravado. " +
+                "He studies threats extensively before committing, ensuring consistent success."
+        ));
+
+        adventurers.add(create(
+                "Ravos Emberhelm",
+                Rank.C,
+                Set.of(AdventurerTrait.FAME_SEEKER),
+                "A hero of several public victories, Ravos thrives under attention. " +
+                "He chooses missions where success will echo across regions."
+        ));
+
+        adventurers.add(create(
+                "Morn Blackledger",
+                Rank.C,
+                Set.of(AdventurerTrait.GREEDY, AdventurerTrait.CAUTIOUS),
+                "Morn treats adventuring like an enterprise. " +
+                "He balances risk and reward with ruthless precision."
+        ));
+
+        adventurers.add(create(
+                "Elowyn Frostmantle",
+                Rank.C,
+                Set.of(AdventurerTrait.LOYAL, AdventurerTrait.AMBITIOUS),
+                "Elowyn seeks to shape the future of the guild itself. " +
+                "She builds loyal teams and grooms future leaders."
+        ));
+
+        adventurers.add(create(
+                "Vaelor Stormreach",
+                Rank.C,
+                Set.of(AdventurerTrait.AMBITIOUS),
+                "Vaelor believes the upper ranks are reserved for those who seize them. " +
+                "He targets elite missions as stepping stones to greater authority."
+        ));
+
+        adventurers.add(create(
+                "Nyra Silverveil",
+                Rank.C,
+                Set.of(AdventurerTrait.CAUTIOUS),
+                "A veteran strategist, Nyra has outlived many stronger adventurers. " +
+                "Her reputation is built on foresight, not force."
+        ));
+
+        return adventurers;
+    }
+
     
     
     private static Adventurer create(String name, Rank rank, Set<AdventurerTrait> traits, String background) {
