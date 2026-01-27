@@ -35,7 +35,7 @@ public class GenerateWeeklyQuestService {
 
 			for (var entry : quota.requested.entrySet()) {
 				QuestDifficulty difficulty = entry.getKey();
-				int count = entry.getValue();
+				int count = entry.getValue() + 2;
 
 				// 1️⃣ Collect templates of this difficulty
 				List<QuestTemplate> candidates = state.questTemplates.stream().filter(t -> t.difficulty == difficulty)
