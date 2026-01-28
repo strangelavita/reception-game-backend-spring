@@ -12,9 +12,11 @@ public class GameStateController {
     public GameStateController(GameStateService s){ this.service = s; }
     
     
-    @GetMapping public GameState get(){ return service.get(); }
+    @GetMapping public GameState get(@RequestParam String stateId){
+    	return service.get(stateId); 
+    	}
     
-    @PostMapping public void resetState() {
-    	service.set(null);
+    @PostMapping public void resetState(@RequestParam String stateId) {
+    	service.clear(stateId);
     }
 }

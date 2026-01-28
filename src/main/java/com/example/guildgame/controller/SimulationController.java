@@ -15,7 +15,7 @@ public class SimulationController {
     }
 
     @PostMapping("/week")
-    public AuditReport simulate(){
-        return sim.simulate(state.get());
+    public AuditReport simulate( @RequestParam String stateId){
+        return sim.simulate(state.get(stateId));
     }
 }

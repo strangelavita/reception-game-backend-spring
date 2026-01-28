@@ -6,4 +6,5 @@ import com.example.guildgame.domain.enums.QuestDifficulty;
 public class WeeklyQuota {
     public EnumMap<QuestDifficulty, Integer> requested =
             new EnumMap<>(QuestDifficulty.class);
+    
 }

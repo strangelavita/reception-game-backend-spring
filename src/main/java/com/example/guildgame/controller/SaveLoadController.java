@@ -15,12 +15,12 @@ public class SaveLoadController {
     }
 
     @PostMapping("/{slot}")
-    public void save(@PathVariable String slot) throws IOException {
-        save.save(state.get(), slot);
+    public void save(@PathVariable String slot, @RequestParam String stateId ) throws IOException {
+        save.save(state.get(stateId), slot, stateId);
     }
 
     @PostMapping("/load/{slot}")
-    public void load(@PathVariable String slot) throws IOException {
-        state.set(save.load(slot));
+    public void load(@RequestParam String stateId,  @PathVariable String slot) throws IOException {
+        state.set(stateId, save.load(slot, stateId));
     }
 }

@@ -21,9 +21,9 @@ public class ReceptionController {
     }
 
     @PostMapping("/next")
-    public ReceptionResponse next() {
+    public ReceptionResponse next(@RequestParam String stateId) {
 
-        GameState state = stateService.get();
+        GameState state = stateService.get(stateId);
 
         Optional<Adventurer> visitor =
                 receptionService.nextVisitor(state);
@@ -42,8 +42,8 @@ public class ReceptionController {
     }
 
     @PostMapping("/end-day")
-    public void endDay() {
-        GameState state = stateService.get();
+    public void endDay(@RequestParam String stateId) {
+        GameState state = stateService.get(stateId);
         receptionService.resetCount();
         state.day++;
         state.currentVisitor = null;

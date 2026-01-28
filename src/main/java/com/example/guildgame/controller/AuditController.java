@@ -14,12 +14,12 @@ public class AuditController {
     }
 
     @PostMapping("/acknowledge")
-    public void acknowledge() {
-        stateService.clearAudit();
+    public void acknowledge(@RequestParam String stateId) {
+        stateService.clearAudit(stateId);
     }
     
     @PostMapping("/acknowledge/promotion")
-    public void acknowledgePromotion() {
-    	stateService.get().receptionist.justPromoted = false;
+    public void acknowledgePromotion(@RequestParam String stateId) {
+    	stateService.get(stateId).receptionist.justPromoted = false;
     }
 }

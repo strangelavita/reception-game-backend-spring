@@ -3,6 +3,7 @@ package com.example.guildgame.controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.guildgame.domain.NewGameRequest;
@@ -25,7 +26,7 @@ public class GameInitController {
     }
 
     @PostMapping("/new")
-    public void newGame(@RequestBody NewGameRequest req) {
-        stateService.set(initService.initialize(req));
+    public void newGame(@RequestParam String stateId, @RequestBody NewGameRequest req) {
+        stateService.set(stateId,initService.initialize(req));
     }
 }

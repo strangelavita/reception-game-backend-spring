@@ -3,6 +3,7 @@ package com.example.guildgame.controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.guildgame.domain.AssignQuestRequest;
@@ -26,9 +27,9 @@ public class QuestController {
     }
 
     @PostMapping("/assign")
-    public QuestAssignment assign(@RequestBody AssignQuestRequest req) {
+    public QuestAssignment assign(@RequestParam String stateId, @RequestBody AssignQuestRequest req) {
         return assignmentService.assignQuest(
-                stateService.get(),
+                stateService.get(stateId),
                 req.questInstanceId,
                 req.adventurerId,
                 req.bonusReward
